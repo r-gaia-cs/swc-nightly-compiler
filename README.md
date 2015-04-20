@@ -38,3 +38,10 @@ To get the list of cron jobs, run
 ~~~
 $ crontab -e
 ~~~
+
+**Important:** by default Cron doesn't know where the programs are
+and because of it you will need to add at the begin of your list of cron jobs
+
+~~~
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+~~~
