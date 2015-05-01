@@ -9,6 +9,7 @@ do
     cd ${lesson}
     git checkout -f gh-pages
     git pull origin gh-pages
+    make check > ../$(basename ${lesson}).status
     make -B preview
     cd -
 done
