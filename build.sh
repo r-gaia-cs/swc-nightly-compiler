@@ -10,6 +10,7 @@ do
     git checkout -f gh-pages
     git pull origin gh-pages
     make check > ../$(basename ${lesson}).status
-    make -B preview
+    make -B epub all-in-one.html preview
+    mv all-in-one.epub ../$(basename ${lesson}).epub
     cd -
 done
